@@ -83,3 +83,8 @@ const optionsElement = document.getElementById("options");
 const nextButton = document.getElementById("next-button");
 const resultElement = document.getElementById("result");
 const resultImagemElement = document.getElementById("result-image");
+
+function sq() {
+    const question = questions[currentQuestion];
+    questionElement.textContent = question.question;
+}
