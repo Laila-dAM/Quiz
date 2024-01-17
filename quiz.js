@@ -87,4 +87,14 @@ const resultImagemElement = document.getElementById("result-image");
 function sq() {
     const question = questions[currentQuestion];
     questionElement.textContent = question.question;
+
+    optionsElement.innerHTML = "";
+    for(let i=0; i<question.options.length; i++){
+        const option = document.createElement("div");
+        option.classList.add("option");
+        option.textContent = question.options[i];
+        option.addEventListener("click", selectOption);
+        optionsElement.appendChild(option);
+    }
+
 }
