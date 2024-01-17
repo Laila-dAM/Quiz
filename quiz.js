@@ -98,3 +98,12 @@ function sq() {
     }
 
 }
+
+function selectOption(event) {
+    const selectOption = event.target.textContent;
+    const question = questions[currentQuestion];
+
+    if(selectOption === question.answer) {
+        score++;
+    }
+}
