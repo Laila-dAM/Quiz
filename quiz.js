@@ -77,3 +77,9 @@ const questions = [
     ];
 let cq = 0;
 let score = 0;
+
+const questionElement = document.getElementById("question");
+const optionsElement = document.getElementById("options");
+const nextButton = document.getElementById("next-button");
+const resultElement = document.getElementById("result");
+const resultImagemElement = document.getElementById("result-image");
