@@ -106,4 +106,6 @@ function selectOption(event) {
     if(selectOption === question.answer) {
         score++;
     }
+
+    optionsElement.querySelectorAll(".option").forEach(option => {option.removeEventListener("click", selectOption);});
 }
