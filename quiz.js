@@ -116,4 +116,6 @@ function showResult() {
     questionElement.textContent = "";
     optionsElement.innerHTML = "";
     nextButton.style.display = "none";
+
+    resultElement.textContent = "Your score:" + score + "/15";
 }
