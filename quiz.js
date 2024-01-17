@@ -108,4 +108,6 @@ function selectOption(event) {
     }
 
     optionsElement.querySelectorAll(".option").forEach(option => {option.removeEventListener("click", selectOption);});
+
+    nextButton.disabled = false;
 }
