@@ -111,3 +111,9 @@ function selectOption(event) {
 
     nextButton.disabled = false;
 }
+
+function showResult() {
+    questionElement.textContent = "";
+    optionsElement.innerHTML = "";
+    nextButton.style.display = "none";
+}
