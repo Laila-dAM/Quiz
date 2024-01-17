@@ -75,3 +75,5 @@ const questions = [
         answer: "Base 2"
       }
     ];
+let cq = 0;
+let score = 0;
