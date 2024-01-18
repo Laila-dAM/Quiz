@@ -143,3 +143,20 @@ function showResult() {
       resultElement.src = "ima4.jpg";
     }
 }
+
+function nextQuestion() {
+  currentQuestion++;
+
+  if(currentQuestion < questions.length){
+    showQuestion();
+    optionsElement.querySelectorAll(".option").forEach(option => {});
+    nextButton.disabled = true;
+  }
+  else {
+    showResult();
+
+  }
+}
+
+nextButton.addEventListener("click, nextQuestion");
+showQuestion();
