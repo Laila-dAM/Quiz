@@ -118,4 +118,28 @@ function showResult() {
     nextButton.style.display = "none";
 
     resultElement.textContent = "Your score:" + score + "/15";
+
+    if (score >= 0 && score <= 4){
+      resultElement.style.color = "#ff0000";
+      resultElement.textContent += "- You need to study more!";
+      resultImagemElement.src = "ima.jpg";
+    }
+
+    else if (score >= 5 && score <= 9){
+      resultElement.style.color= "#ffa500";
+      resultElement.textContent += "-Good job!";
+      resultElement.src = "ima2.jpg";
+    }
+
+    else if (score >= 10 && score <= 14){
+      resultElement.style.color = "#ffff00";
+      resultElement.textContent += "-Excellent!";
+      resultElement.src = "ima3.jpg";
+    }
+
+    else {
+      resultElement.style.color = "#008000";
+      resultElement.textContent += "-Perfect score!";
+      resultElement.src = "ima4.jpg";
+    }
 }
