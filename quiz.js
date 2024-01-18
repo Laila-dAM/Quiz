@@ -100,16 +100,19 @@ function showQuestion() {
 }
 
 function selectOption(event) {
-    const selectOption = event.target.textContent;
-    const question = questions[currentQuestion];
+  const selectedOption = event.target;
+  const question = questions[currentQuestion];
 
-    if(selectOption === question.answer) {
-        score++;
-    }
+  if (selectedOption.textContent === question.answer) {
+      score++;
+  }
 
-    optionsElement.querySelectorAll(".option").forEach(option => {option.removeEventListener("click", selectOption);});
+  optionsElement.querySelectorAll(".option").forEach(option => {
+      option.removeEventListener("click", selectOption);
+  });
 
-    nextButton.disabled = false;
+  selectedOption.classList.add("selected-option");
+  nextButton.disabled = false;
 }
 
 function showResult() {
