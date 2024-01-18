@@ -75,7 +75,7 @@ const questions = [
         answer: "Base 2"
       }
     ];
-let cq = 0;
+let currentQuestion = 0;
 let score = 0;
 
 const questionElement = document.getElementById("question");
@@ -84,7 +84,7 @@ const nextButton = document.getElementById("next-button");
 const resultElement = document.getElementById("result");
 const resultImagemElement = document.getElementById("result-image");
 
-function sq() {
+function showQuestion() {
     const question = questions[currentQuestion];
     questionElement.textContent = question.question;
 
@@ -158,5 +158,5 @@ function nextQuestion() {
   }
 }
 
-nextButton.addEventListener("click, nextQuestion");
+nextButton.addEventListener("click", nextQuestion);
 showQuestion();
